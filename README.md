@@ -1,7 +1,8 @@
-# -LATIHAN6DPBO2023
+# LATIHAN6DPBO2023
 Latihan 6 Synchronization
 
 ## Janji
+Saya Destira Lestari Saraswati NIM 2100506 mengerjakan soal Latihan 6 dalam mata kuliah Desain Pemrograman Berorientasi Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
 
 # Synchronization Game
 
@@ -40,6 +41,7 @@ Kelas `Synchronization` berisi metode `main` yang digunakan untuk menjalankan ga
 ## Batasan Program
 
 1. Program ini hanya mendukung gerakan karakter pemain. Tidak ada objek interaktif atau musuh lain dalam game ini.
+
 2. Hanya terdapat Score
   - Score dihitung jika:
     - Pemain menekan tombol W atau A atau S atau D atau Arrow-Up atau Arrow-Down atau Arrow-left atau Arrow-Right
@@ -58,6 +60,7 @@ Game ini kompatibel dengan sistem operasi yang mendukung Java 8 atau lebih baru,
 
 ## Diagram UML
 
+*Saat ini belum ada Diagram UML yang tersedia.*
 
 ## Kelas, Atribut, dan Metode
 
