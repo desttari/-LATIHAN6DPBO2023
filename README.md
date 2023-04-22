@@ -52,6 +52,8 @@ Kelas `Synchronization` berisi metode `main` yang digunakan untuk menjalankan ga
 
 ## Screenshots
 
+![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
+![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
 *Saat ini belum ada screenshot yang tersedia.*
 
 ## Kompatibilitas
@@ -60,6 +62,7 @@ Game ini kompatibel dengan sistem operasi yang mendukung Java 8 atau lebih baru,
 
 ## Diagram UML
 
+![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
 *Saat ini belum ada Diagram UML yang tersedia.*
 
 ## Kelas, Atribut, dan Metode
