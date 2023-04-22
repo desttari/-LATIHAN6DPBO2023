@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Synchronization">
+  <ClassDiagramComponents>
+    <Class name="Controller" package="synchronization" visibility="public" xPosition="469.0" yPosition="1004.0">
+      <Fields>
+        <Field name="game" type="Game" visibility="private"/>
+        <Field name="handler" type="Handler" visibility="private"/>
+        <Field name="lastKeyPressed" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Game" name="game"/>
+          <Argument type="Handler" name="handler"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getGame" returnType="Game" visibility="public"/>
+        <Method name="setGame" returnType="void" visibility="public">
+          <Argument type="Game" name="game"/>
+        </Method>
+        <Method name="getHandler" returnType="Handler" visibility="public"/>
+        <Method name="setHandler" returnType="void" visibility="public">
+          <Argument type="Handler" name="handler"/>
+        </Method>
+        <Method name="keyPressed" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="KeyEvent" name="e"/>
+        </Method>
+        <Method name="keyReleased" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="KeyEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Display" package="synchronization" visibility="public" xPosition="1167.0" yPosition="1159.0">
+      <Fields>
+        <Field name="frame" type="JFrame" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="width"/>
+          <Argument type="int" name="height"/>
+          <Argument type="String" name="title"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="open" returnType="void" visibility="public">
+          <Argument type="Game" name="game"/>
+        </Method>
+        <Method name="close" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Game" package="synchronization" visibility="public" xPosition="839.0" yPosition="1004.0">
+      <Fields>
+        <Field name="width" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="height" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="display" type="Display" visibility="private"/>
+        <Field name="running" type="boolean" visibility="private"/>
+        <Field name="handler" type="Handler" visibility="private"/>
+        <Field name="thread" type="Thread" visibility="private"/>
+        <Field name="startCounting" type="boolean" visibility="private"/>
+        <Field name="score" type="int" visibility="private"/>
+        <Field name="counter" type="int" visibility="private"/>
+        <Field name="stateCounter" type="int" visibility="private"/>
+        <Field name="direction" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="isRunning" returnType="boolean" visibility="public"/>
+        <Method name="setRunning" returnType="void" visibility="public">
+          <Argument type="boolean" name="running"/>
+        </Method>
+        <Method name="getScore" returnType="int" visibility="public"/>
+        <Method name="setScore" returnType="void" visibility="public">
+          <Argument type="int" name="score"/>
+        </Method>
+        <Method name="clamp" returnType="int" visibility="public" isStatic="true">
+          <Argument type="int" name="var"/>
+          <Argument type="int" name="min"/>
+          <Argument type="int" name="max"/>
+        </Method>
+        <Method name="close" returnType="void" visibility="public"/>
+        <Method name="start" returnType="void" visibility="public" isSynchronized="true"/>
+        <Method name="stop" returnType="void" visibility="public" isSynchronized="true"/>
+        <Method name="render" returnType="void" visibility="public"/>
+        <Method name="loop" returnType="void" visibility="public"/>
+        <Method name="run" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="GameObject" package="synchronization" visibility="public" xPosition="1046.0" yPosition="394.0">
+      <Fields>
+        <Field name="x" type="int" visibility="protected"/>
+        <Field name="width" type="int" visibility="protected"/>
+        <Field name="velX" type="int" visibility="protected"/>
+        <Field name="type" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="x"/>
+          <Argument type="int" name="y"/>
+          <Argument type="String" name="type"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="x"/>
+          <Argument type="int" name="y"/>
+          <Argument type="int" name="width"/>
+          <Argument type="int" name="height"/>
+          <Argument type="String" name="type"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getX" returnType="int" visibility="public"/>
+        <Method name="setX" returnType="void" visibility="public">
+          <Argument type="int" name="x"/>
+        </Method>
+        <Method name="getY" returnType="int" visibility="public"/>
+        <Method name="setY" returnType="void" visibility="public">
+          <Argument type="int" name="y"/>
+        </Method>
+        <Method name="getWidth" returnType="int" visibility="public"/>
+        <Method name="setWidth" returnType="void" visibility="public">
+          <Argument type="int" name="width"/>
+        </Method>
+        <Method name="getHeight" returnType="int" visibility="public"/>
+        <Method name="setHeight" returnType="void" visibility="public">
+          <Argument type="int" name="height"/>
+        </Method>
+        <Method name="getVelX" returnType="int" visibility="public"/>
+        <Method name="setVelX" returnType="void" visibility="public">
+          <Argument type="int" name="velX"/>
+        </Method>
+        <Method name="getVelY" returnType="int" visibility="public"/>
+        <Method name="setVelY" returnType="void" visibility="public">
+          <Argument type="int" name="velY"/>
+        </Method>
+        <Method name="getType" returnType="String" visibility="public"/>
+        <Method name="setType" returnType="void" visibility="public">
+          <Argument type="String" name="type"/>
+        </Method>
+        <Method name="render" returnType="void" visibility="public">
+          <Argument type="Graphics" name="object"/>
+        </Method>
+        <Method name="loop" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Handler" package="synchronization" visibility="public" xPosition="469.0" yPosition="375.0">
+      <Fields>
+        <Field name="object" type="ArrayList&lt;GameObject&gt;" visibility="private"/>
+        <Field name="rand" type="Random" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="add" returnType="void" visibility="public">
+          <Argument type="GameObject" name="object"/>
+        </Method>
+        <Method name="get" returnType="GameObject" visibility="public">
+          <Argument type="int" name="i"/>
+        </Method>
+        <Method name="count" returnType="int" visibility="public"/>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="int" name="i"/>
+        </Method>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="GameObject" name="object"/>
+        </Method>
+        <Method name="render" returnType="void" visibility="public">
+          <Argument type="Graphics" name="g"/>
+        </Method>
+        <Method name="loop" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Player" package="synchronization" visibility="public" xPosition="1617.0" yPosition="625.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="x"/>
+          <Argument type="int" name="y"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="render" returnType="void" visibility="public">
+          <Argument type="Graphics" name="object"/>
+        </Method>
+        <Method name="loop" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Synchronization" package="synchronization" visibility="public" xPosition="1479.0" yPosition="944.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="GameInterface" package="synchronization" visibility="public" xPosition="1117.0" yPosition="187.0">
+      <Methods>
+        <Method name="render" returnType="void" visibility="public">
+          <Argument type="Graphics" name="object"/>
+        </Method>
+        <Method name="loop" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="game" source="synchronization.Controller" target="synchronization.Game" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="synchronization.GameObject" target="synchronization.GameInterface"/>
+    <UseRelation source="synchronization.Handler" target="synchronization.GameObject" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="handler" source="synchronization.Controller" target="synchronization.Handler" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="handler" source="synchronization.Game" target="synchronization.Handler" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="synchronization.Player" target="synchronization.GameObject"/>
+    <UseRelation source="synchronization.Display" target="synchronization.Game" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="display" source="synchronization.Game" target="synchronization.Display" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="synchronization.Controller" target="synchronization.Game" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="synchronization.Handler" target="synchronization.GameInterface"/>
+    <HasRelation name="object" source="synchronization.Handler" target="synchronization.GameObject" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;GameObject&gt;"/>
+    <UseRelation source="synchronization.Controller" target="synchronization.Handler" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
