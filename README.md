@@ -1,5 +1,5 @@
-# LATIHAN6DPBO2023
-Latihan 6 Synchronization
+# LATIHAN7DPBO2023
+Latihan 7 Synchronization
 
 ## Janji
 Saya Destira Lestari Saraswati NIM 2100506 mengerjakan soal Latihan 6 dalam mata kuliah Desain Pemrograman Berorientasi Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
