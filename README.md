@@ -52,9 +52,8 @@ Kelas `Synchronization` berisi metode `main` yang digunakan untuk menjalankan ga
 
 ## Screenshots
 
-![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
-![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
-*Saat ini belum ada screenshot yang tersedia.*
+![1](/Screenshots/lp7.jpg?raw=true "Screenshot program 1")
+![2](/Screenshots/lp8.jpg?raw=true "Screenshot program 2")
 
 ## Kompatibilitas
 
@@ -62,8 +61,7 @@ Game ini kompatibel dengan sistem operasi yang mendukung Java 8 atau lebih baru,
 
 ## Diagram UML
 
-![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
-*Saat ini belum ada Diagram UML yang tersedia.*
+![0](/Screenshots/LP.png?raw=true "Screenshot UML Program ")
 
 ## Kelas, Atribut, dan Metode
 
@@ -98,6 +96,8 @@ Game ini kompatibel dengan sistem operasi yang mendukung Java 8 atau lebih baru,
 - Player: `render(Graphics)`, `loop()`
 
 ## Cara Menjalankan
+
+` file.jar ada di folder /Synchronization/dist `
 
 Untuk menjalankan game ini, Anda perlu mengkompilasi dan menjalankan kelas `Synchronization`. Pastikan Anda memiliki semua file di atas dalam paket yang sama dan JDK yang sesuai terinstal.
 
